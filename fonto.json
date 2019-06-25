@@ -1,0 +1,8 @@
+{
+	"rootSchemas": {
+		"recipe.xsd": {
+			"packageName": "recipe-sx-shell",
+			"locations": ["urn:fontoxml:training:delicious:recipe.xsd"]
+		}
+	}
+}

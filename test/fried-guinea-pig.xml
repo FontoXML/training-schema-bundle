@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:fontoxml:training:delicious:recipe.xsd">
+   <title>Fried Guinea Pig (Ayacucho-style)</title>
+   <description>
+       <p>Yummy, eat your favourite family member!</p>
+   </description>
+   <allergy-warning>
+       <p>Do not use this recipe if you are allergic to:</p>
+       <ul>
+           <li><p>Pets</p></li>
+       </ul>
+   </allergy-warning>
+   <steps>
+       <step>
+           <p>Pat dry the <ingredient>skin of the guinea pig</ingredient> and rub in the <ingredient>cumin</ingredient>, <ingredient>salt</ingredient>, and <ingredient>pepper</ingredient>.</p>
+       </step>
+       <step>
+           <p>Preheat <ingredient>oil</ingredient>.</p>
+       </step>
+       <step>
+           <p>Dust the carcass with the <ingredient>flour</ingredient> and place it on its back in the oil, turning to cook both sides. Alternately, the guinea pig can be cut and fried in quarters.</p>
+       </step>
+       <step>
+           <p>Serve with <ingredient>boiled potato</ingredient> or boiled <ingredient>manioc root</ingredient>, and a salad of cut <ingredient>tomatoes</ingredient> and <ingredient>slivered onions</ingredient> bathed in <ingredient>lime juice</ingredient> and a bit of salt.</p>
+       </step>
+       <step>
+           <p>Have cold <ingredient>beer</ingredient> on hand.</p>
+       </step>
+   </steps>
+</recipe>

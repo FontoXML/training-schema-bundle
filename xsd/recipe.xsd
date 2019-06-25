@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1">
+    <xs:complexType name="narrative.inline.type" mixed="true">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="i" type="narrative.inline.type" />
+            <xs:element name="b" type="narrative.inline.type" />
+            <xs:element name="u" type="narrative.inline.type" />
+            <xs:element name="ingredient" type="xs:string" />
+        </xs:choice>
+    </xs:complexType>
+    <xs:group name="narrative.block.group">
+        <xs:choice>
+            <xs:element name="p" type="narrative.inline.type" />
+            <xs:element name="ul">
+                <xs:complexType>
+                    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                        <xs:element name="li" type="narrative.block.type" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="narrative.block.type" mixed="false">
+        <xs:group ref="narrative.block.group" minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+    <xs:element name="recipe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string" />
+                <xs:element name="description" type="narrative.block.type" />
+                <xs:element name="allergy-warning" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType mixed="false">
+                        <xs:group ref="narrative.block.group" minOccurs="0" maxOccurs="unbounded" />
+                        <xs:attribute name="severity" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="steps">
+                    <xs:complexType>
+                        <xs:choice maxOccurs="unbounded">
+                            <xs:element name="step" type="narrative.block.type" />
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
